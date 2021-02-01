@@ -1,4 +1,4 @@
-/*-----------------------------------------------------------------
+/*-----------------------------------------------------------------------------
 Challenge: 00-sayHello (example)
 
 Difficulty: Basic
@@ -10,7 +10,7 @@ Write a function called sayHello that returns the string "Hello!".
 Examples:
 
 sayHello() //=> Hello!
------------------------------------------------------------------*/
+-----------------------------------------------------------------------------*/
 // Your solution for 00-sayHello (example) here:
 
 function sayHello() {
@@ -18,7 +18,7 @@ function sayHello() {
 }
 
 
-/*-----------------------------------------------------------------
+/*-----------------------------------------------------------------------------
 Challenge: 01-addOne
 
 Difficulty: Basic
@@ -31,7 +31,7 @@ Examples:
 
 addOne(1) //=> 2
 addOne(-5) //=> -4
------------------------------------------------------------------*/
+-----------------------------------------------------------------------------*/
 // Your solution for 01-addOne here:
 
 function addOne(n) {
@@ -67,24 +67,24 @@ function addTwoNumbers(a, b) {
 }
 
 
-/*-----------------------------------------------------------------
-Challenge: 03-sumNumbers
+/*-----------------------------------------------------------------------------
+Challenge: 02-addTwoNumbers
 
-Difficulty: Basic  
+Difficulty: Basic
 
 Prompt:
 
-- Write a function called sumNumbers that accepts a single array of numbers and returns the sum of the numbers in the array.
-- If the array is empty, return 0 (zero).
+- Write a function called addTwoNumbers that accepts two numeric arguments and returns the sum of those two numbers.
+- If either argument is not a number, return the value of NaN.
 
 Examples:
 
-sumNumbers([10]) //=> 10
-sumNumbers([5, 10]) //=> 15
-sumNumbers([2, 10, -5]) //=> 7
-sumNumbers([]) //=> 0
------------------------------------------------------------------*/
-// Your solution for 03-sumNumbers here:
+addTwoNumbers(5, 10) //=> 15
+addTwoNumbers(10, -2) //=> 8
+addTwoNumbers(0, 0) //=> 0
+addTwoNumbers('Hello', 5) //=> NaN
+-----------------------------------------------------------------------------*/
+// Your solution for 02-addTwoNumbers here:
 
 /*--- okay solution ---*/
 function sumNumbers(nums) {
@@ -1116,24 +1116,25 @@ function countTheBits(int) {
 /*-----------------------------------------------------------------
 Challenge: 28-gridTrip
 
-Difficulty:  Intermediate
+Difficulty: Intermediate
 
 Prompt:
 
-- This challenge uses an imaginary grid where the x coordinate increases when you move 'up' and decreases when you move 'down'.  Similarly, the y coordinate increases when you move 'right' and decreases when you move 'left'.
+- This challenge uses an imaginary grid where the y coordinate increases when you move up and decreases when you move down. Similarly, the x coordinate increases when you move right and decreases when you move left.
 - Write a function called gridTrip that accepts two arguments.
-- The first argument is an array containing two integers.  The first represents the starting x position on the grid.  The second integer in the array represents the starting y position.
-- The second argument is a string representing "moves" using the characters 'U', 'D', 'R' & 'L' to represent moving Up, Down, Right & Left respectively.  Each direction character will be followed by digits representing how many units to move in that direction.  For example, a string of 'D15R2U4' represents moving up 15 units, to the right 2 units, and finally, down 4 units.  The direction characters will always be upper case.
-- The gridTrip function should return a new array of two integers: the final x position and the final y position.  Do not modify the array argument).
+- The first argument is an array containing two integers. The value in the first index of the array represents the starting x position on the grid. The second value in the array represents the starting y position.
+- The second argument is a string representing "moves" using the characters 'U', 'D', 'R' & 'L' to mean moving Up, Down, Right & Left, respectively. Each direction character is followed by digits representing how many units to move in that direction. For example, a string of 'D15R2U4' moves up 15 units, right 2 units, and finally, down 4 units from the starting coordinates.
+- The direction characters will always be upper case.
+- The gridTrip function should return a new array of two integers: the final x position and the final y position. Do not modify the array argument).
 
 Hint:
-- Using the String.match method to return an array of regular expression matches can be helpful if you want to break the single string of moves into an array of distinct moves by direction.  Be sure to use the global flag, e.g. /cat/g, when defining the regexp.
+- Using the String.match method to return an array of regular expression matches can be helpful if you want to break the single string of moves into an array of distinct moves by direction. Be sure to use the global flag, e.g. /cat/g, when defining the regexp.
 
 Examples:
 
-gridTrip( [0, 0], 'U2R1' ) // => [2, 1]
-gridTrip( [5, 10], 'D5L15U2' ) //-> [2, -5]
-gridTrip( [-22, 100], 'L2L15D50U1D9') //=> [-80, 83]
+gridTrip( [0, 0], 'U2R1' ) // => [1, 2]
+gridTrip( [10, 5], 'D5L15U2' ) //-> [-5, 2]
+gridTrip( [100, -22], 'L2L15D50U1D9') //=> [83, -80]
 -----------------------------------------------------------------*/
 // Your solution for 28-gridTrip here:
 

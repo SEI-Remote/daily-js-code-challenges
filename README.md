@@ -14,7 +14,7 @@ However, real learning doesn't take place until you practice what your instructo
 
 Many lessons are followed by post-lesson labs to provide practice in class. And of course, there's project week, where many students often feel they learn the most.
 
-To provide additional practice writing JavaScript functions to solve a specific task, you will be required to complete one code challenge per day during weeks: 1, 2, 4, 5, 7 & 8, totaling 30 challenges.
+To provide additional practice writing JavaScript functions to solve a specific task, you should generally complete one code challenge per day during weeks: 1, 2, 4, 5, 7 & 8, totaling 30 challenges.
 
 These code challenges are considered a deliverable which is due on the last day of the course, on par with that of a unit project, and thus you must complete them to receive a Certificate of Completion.
 
@@ -24,9 +24,9 @@ You may choose to do more than one per day, or none at all - don't fall too far 
 
 ## Set Up
 
-1. Fork this repo into your GHE account by clicking the **[Fork]** button in the top-right of the page.
+1. Fork this repo into your GitHub account by clicking the **[Fork]** button in the top-right of the page.
 
-2. Use the alias you made earlier (probably `sei`) to move into your **~/code/sei** directory.
+2. Use the alias you made earlier (`sei`) to move into your **~/code/sei** directory.
 
 3. To bring the materials in the repo into your computer, clone *your fork* of the repo by copying the URL shown when you click the **[Clone or download]**: `git clone <the copied URL>`
 

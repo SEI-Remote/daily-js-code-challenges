@@ -82,7 +82,18 @@ sumNumbers([2, 10, -5]) //=> 7
 sumNumbers([]) //=> 0
 -----------------------------------------------------------------------------*/
 // Your solution for 03-sumNumbers here:
-
+function sumNumbers (numArr) {
+  if (numArr.length > 0) {
+    let sum = 0;
+    for (i = 0; i < numArr.length; i++) {
+      sum = numArr[i] + sum;
+    }
+    return sum;
+  }
+  else {
+    return 0;
+  }
+}
 
 
 

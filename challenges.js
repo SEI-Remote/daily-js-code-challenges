@@ -188,7 +188,16 @@ range(1,1) //=> []
 range(5,2) //=> "First argument must be less than second"
 -----------------------------------------------------------------------------*/
 // Your solution for 06-range here:
-
+function range(rangeStart, rangeEnd) {
+  if (rangeEnd < rangeStart) {
+    return "First argument must be less than second";
+  }
+  let arr = [];
+  for (i = rangeStart; i < rangeEnd; i++) {
+    arr.push(i);
+  }
+  return arr;
+}
 
 
 

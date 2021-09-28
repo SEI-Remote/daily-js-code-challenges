@@ -151,8 +151,22 @@ computeRemainder(4,0) //=> Infinity
 computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------------------*/
 // Your solution for 05-computeRemainder:
+function computeRemainder(num1, num2) {
+  if (num2 == 0) {
+    return Infinity;
+  }
+  else {
+    return cleanTrailingZeros(Math.abs((Math.trunc((num1/num2)) - (num1 / num2)) * num2));
+  }
+}
 
-
+function cleanTrailingZeros(num) {
+  let cleanNum = num.toFixed(4);
+  if (cleanNum.match(/\./)) {
+    cleanNum = cleanNum.replace(/\.?0+$/, '');
+  }
+  return parseFloat(cleanNum);
+}
 
 
 

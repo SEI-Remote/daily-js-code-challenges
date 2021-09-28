@@ -216,7 +216,13 @@ Examples:
 reverseUpcaseString("SEI Rocks!"); //=> "!SKCOR IES" 
 -----------------------------------------------------------------------------*/
 // Your solution for 07-reverseUpcaseString here:
-
+function reverseUpcaseString(text) {
+  let reverseText = '';
+  for (i = text.length - 1; i > -1; i--) {
+    reverseText = reverseText + text.charAt(i);
+  }
+  return reverseText.toUpperCase();
+}
 
 
 

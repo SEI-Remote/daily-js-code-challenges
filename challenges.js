@@ -116,7 +116,18 @@ add(1,50,1.23) //=> 52.23
 add(7,-12) //=> -5
 -----------------------------------------------------------------------------*/
 // Your solution for 04-addList here:
-
+function addList() {
+  if (arguments.length > 0) {
+    let sum = 0;
+    for (i = 0; i < arguments.length; i++) {
+      sum = arguments[i] + sum;
+    }
+    return sum;
+  }
+  else {
+    return 0;
+  }
+}
 
 
 

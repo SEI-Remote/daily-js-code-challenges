@@ -243,7 +243,15 @@ removeEnds('SEI Rocks!'); //=> "DI Rocks"
 removeEnds('a'); //=> "" (empty string)
 -----------------------------------------------------------------------------*/
 // Your solution for 08-removeEnds here:
-
+function removeEnds(text) {
+  if (text.length < 3) {
+    return "";
+  }
+  else {
+    return text.slice(1,-1);
+    // return text.substring(1, text.length-1);
+  }
+}
 
 
 

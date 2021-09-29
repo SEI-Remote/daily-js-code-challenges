@@ -26,7 +26,7 @@ You may choose to do more than one per day, or none at all - don't fall too far 
 
 1. Fork this repo into your GitHub account by clicking the **[Fork]** button in the top-right of the page.
 
-2. Use the alias you made earlier (`sei`) to move into your **~/code/sei** directory.
+2. Move into your **~/code/sei** directory.
 
 3. To bring the materials in the repo into your computer, clone *your fork* of the repo by copying the URL shown when you click the **[Clone or download]**: `git clone <the copied URL>`
 

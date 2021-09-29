@@ -335,7 +335,13 @@ isPalindrome('A nut for a jar of tuna'); //=> true
 isPalindrome(''); //=> true
 -----------------------------------------------------------------------------*/
 // Your solution for 11-isPalindrome here:
-
+function isPalindrome(text){
+  let arr = text.toLowerCase().replace(/\s/g,'').split('')
+  // console.log(`Input text is ${arr.join('')}`)
+  // console.log(`Input text reversed is ${arr.reverse().join('')}`)
+  // console.log(arr.join('') === arr.reverse().join(''))
+  return arr.join('') === arr.reverse().join('')
+}
 
 
 

@@ -308,7 +308,9 @@ formatWithPadding(42, '*', 10); //=> "********42"
 formatWithPadding(1234, '*', 3); //=> "1234"
 -----------------------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
-
+function formatWithPadding(num, padChar, padLen){
+  return num.toString().padStart(padLen, padChar);
+}
 
 
 

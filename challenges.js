@@ -403,7 +403,13 @@ mumble('!A 2'); //=> '!-AA-   -2222'
 -----------------------------------------------------------------------------*/
 // Your solution for 13-mumble here:
 
-
+function mumble(text){
+  let mumbleText = text[0]
+  for (i = 1; i < text.length; i++) {
+    mumbleText = mumbleText + '-' + text[i].repeat(i + 1)
+  }
+  return mumbleText
+}
 
 
 

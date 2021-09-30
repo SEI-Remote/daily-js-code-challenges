@@ -33,7 +33,7 @@ addOne(-5) //=> -4
 -----------------------------------------------------------------------------*/
 // Your solution for 01-addOne here:
 function addOne (num) {
-  return num + 1;
+  return num + 1
 }
 
 
@@ -58,7 +58,7 @@ addTwoNumbers('Hello', 5) //=> NaN
 -----------------------------------------------------------------------------*/
 // Your solution for 02-addTwoNumbers here:
 function addTwoNumbers (num1, num2) {
-  return (isNaN(num1) || isNaN(num2)) ? NaN : num1 + num2;
+  return (isNaN(num1) || isNaN(num2)) ? NaN : num1 + num2
   }
 
 
@@ -84,14 +84,14 @@ sumNumbers([]) //=> 0
 // Your solution for 03-sumNumbers here:
 function sumNumbers (numArr) {
   if (numArr.length > 0) {
-    let sum = 0;
+    let sum = 0
     for (i = 0; i < numArr.length; i++) {
-      sum = numArr[i] + sum;
+      sum += numArr[i]
     }
-    return sum;
+    return sum
   }
   else {
-    return 0;
+    return 0
   }
 }
 
@@ -118,14 +118,14 @@ add(7,-12) //=> -5
 // Your solution for 04-addList here:
 function addList() {
   if (arguments.length > 0) {
-    let sum = 0;
+    let sum = 0
     for (i = 0; i < arguments.length; i++) {
-      sum = arguments[i] + sum;
+      sum = arguments[i] + sum
     }
-    return sum;
+    return sum
   }
   else {
-    return 0;
+    return 0
   }
 }
 
@@ -153,19 +153,19 @@ computeRemainder(10.5, 3) //=> 1.5
 // Your solution for 05-computeRemainder:
 function computeRemainder(num1, num2) {
   if (num2 == 0) {
-    return Infinity;
+    return Infinity
   }
   else {
-    return cleanTrailingZeros(Math.abs((Math.trunc((num1/num2)) - (num1 / num2)) * num2));
+    return cleanTrailingZeros(Math.abs((Math.trunc((num1/num2)) - (num1 / num2)) * num2))
   }
 }
 
 function cleanTrailingZeros(num) {
-  let cleanNum = num.toFixed(4);
+  let cleanNum = num.toFixed(4)
   if (cleanNum.match(/\./)) {
-    cleanNum = cleanNum.replace(/\.?0+$/, '');
+    cleanNum = cleanNum.replace(/\.?0+$/, '')
   }
-  return parseFloat(cleanNum);
+  return parseFloat(cleanNum)
 }
 
 
@@ -190,13 +190,13 @@ range(5,2) //=> "First argument must be less than second"
 // Your solution for 06-range here:
 function range(rangeStart, rangeEnd) {
   if (rangeEnd < rangeStart) {
-    return "First argument must be less than second";
+    return 'First argument must be less than second'
   }
-  let arr = [];
+  let arr = []
   for (i = rangeStart; i < rangeEnd; i++) {
-    arr.push(i);
+    arr.push(i)
   }
-  return arr;
+  return arr
 }
 
 
@@ -219,9 +219,9 @@ reverseUpcaseString("SEI Rocks!"); //=> "!SKCOR IES"
 function reverseUpcaseString(text) {
   let reverseText = '';
   for (i = text.length - 1; i > -1; i--) {
-    reverseText = reverseText + text.charAt(i);
+    reverseText = reverseText + text.charAt(i)
   }
-  return reverseText.toUpperCase();
+  return reverseText.toUpperCase()
 }
 
 
@@ -245,10 +245,10 @@ removeEnds('a'); //=> "" (empty string)
 // Your solution for 08-removeEnds here:
 function removeEnds(text) {
   if (text.length < 3) {
-    return "";
+    return ''
   }
   else {
-    return text.slice(1,-1);
+    return text.slice(1,-1)
     // return text.substring(1, text.length-1);
   }
 }
@@ -275,13 +275,13 @@ charCount('Today is fantastic!') //=> { T: 1, o: 1, d: 1, a: 3, y: 1, ' ': 2, i:
 -----------------------------------------------------------------------------*/
 // Your solution for 09-charCount here:
 function charCount(text) {
-  const charCounts = { };
+  const charCounts = { }
   while (text.length > 0) {
-    let currChar = text.charAt(0);
-    currChar in charCounts ? charCounts[currChar]++ : charCounts[currChar] = 1;
-    text = text.slice(1);
+    let currChar = text.charAt(0)
+    currChar in charCounts ? charCounts[currChar]++ : charCounts[currChar] = 1
+    text = text.slice(1)
   }
-  return charCounts;
+  return charCounts
 }
 
 
@@ -309,7 +309,7 @@ formatWithPadding(1234, '*', 3); //=> "1234"
 -----------------------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
 function formatWithPadding(num, padChar, padLen){
-  return num.toString().padStart(padLen, padChar);
+  return num.toString().padStart(padLen, padChar)
 }
 
 
@@ -367,7 +367,18 @@ hammingDistance('!!!!', '****'); //=> 4
 hammingDistance('abc', 'ab'); //=> NaN
 -----------------------------------------------------------------------------*/
 // Your solution for 12-hammingDistance here:
-
+function hammingDistance(stg1, stg2) {
+  let diff = 0
+  if (stg1.length === stg2.length) {
+    for (i = 0; i < stg1.length; i++) {
+      if (stg1[i] !== stg2[i]) {
+        diff++
+      }
+    }
+  }
+  else return NaN
+  return diff
+}
 
 
 

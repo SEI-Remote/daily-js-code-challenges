@@ -39,7 +39,6 @@ Challenges are considered complete when the Jasmine tests return as passing for 
 
 - The default display shows only the challenges that are failing. To see an overall summary of all tests, click the "**Spec List**" link.
 
-- After solving a challenge, be sure to check the solution(s) contained in `solutions.js`. If multiple solutions are provided, they are typically shown in increasing order of "elegance".
 
 ## Committing and Pushing your Work
 

@@ -4,7 +4,7 @@
 
 ## Intro
 
-During your 12 weeks in SEI, your instructors will be helping you learn tons of coding knowledge and skills using a proven approach where each lesson typically includes a mixture of:
+During your 12 weeks in SEI, your instructors will be helping you learn tons of coding knowledge and skills using a proven approach where each lesson includes a mixture of:
 - Instructor lecture & demonstration
 - Instructor/student code alongs
 - In-lesson student exercises
@@ -14,13 +14,7 @@ However, real learning doesn't take place until you practice what your instructo
 
 Many lessons are followed by post-lesson labs to provide practice in class. And of course, there's project week, where many students often feel they learn the most.
 
-To provide additional practice writing JavaScript functions to solve a specific task, you should generally complete one code challenge per day during weeks: 1, 2, 4, 5, 7 & 8, totaling 30 challenges.
-
-These code challenges are considered a deliverable which is due on the last day of the course, on par with that of a unit project, and thus you must complete them to receive a Certificate of Completion.
-
-Challenges are considered complete when the Jasmine tests return as passing for all thirty challenges. 
-
-You may choose to do more than one per day, or none at all - don't fall too far behind though!
+Challenges are considered complete when the Jasmine tests return as passing for all 20 challenges. 
 
 ## Set Up
 

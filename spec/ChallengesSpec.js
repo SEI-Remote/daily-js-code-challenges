@@ -228,20 +228,7 @@ describe("18-reduceArray", function () {
   });
 });
 
-describe("19-flatten", function () {
-  it("returns a new array", function () {
-    var arr = [];
-    expect(flatten(arr)).not.toBe(arr);
-  });
-  it("flattens a nested array", function () {
-    expect(flatten([1, [2, 3]])).toEqual([1, 2, 3]);
-  });
-  it("flattens an array with deeply nested arrays", function () {
-    expect(flatten([1, [2, [3, [4]]], 1, 'a', ['b', 'c']])).toEqual([1, 2, 3, 4, 1, 'a', 'b', 'c']);
-  });
-});
-
-describe("20-isPrime", function () {
+describe("19-isPrime", function () {
   it("primes are greater than 1", function () {
     expect(isPrime(1)).toBe(false);
   });
@@ -257,22 +244,7 @@ describe("20-isPrime", function () {
   });
 });
 
-describe("21-primeFactors", function () {
-  it("returns an empty array if num not greater than 1", function () {
-    expect(primeFactors(1)).toEqual([]);
-  });
-  it("returns prime factors", function () {
-    expect(primeFactors(2).sort()).toEqual([2]);
-    expect(primeFactors(3).sort()).toEqual([3]);
-    expect(primeFactors(4).sort()).toEqual([2, 2]);
-    expect(primeFactors(18).sort()).toEqual([2, 3, 3]);
-    expect(primeFactors(29).sort()).toEqual([29]);
-    expect(primeFactors(105).sort()).toEqual([3, 5, 7]);
-    expect(primeFactors(200).sort()).toEqual([2, 2, 2, 5, 5]);
-  });
-});
-
-describe("22-intersection", function () {
+describe("20-intersection", function () {
   it("returns an empty array when no intersection exists", function () {
     expect(intersection([1], [2])).toEqual([]);
   });
@@ -291,103 +263,3 @@ describe("22-intersection", function () {
     expect(a2).toEqual(_a2);
   });
 });
-
-describe("23-balancedBrackets", function () {
-  it("returns false when not balanced", function () {
-    expect(balancedBrackets('(]')).toBe(false);
-    expect(balancedBrackets('[(])')).toBe(false);
-  });
-  it("returns true when balanced", function () {
-    expect(balancedBrackets('()')).toBe(true);
-    expect(balancedBrackets('[{}]')).toBe(true);
-    expect(balancedBrackets('[({}[])]')).toBe(true);
-  });
-});
-
-describe("24-isWinningTicket", function () {
-  it("returns a boolean", function () {
-    expect(typeof isWinningTicket([['a', 1]])).toBe('boolean');
-  });
-  it("checks for winning ticket", function () {
-    expect(isWinningTicket([['ABC', 65]])).toBe(true);
-    expect(isWinningTicket([['ABC', 999]])).toBe(false);
-    expect(isWinningTicket([['ABC', 999], ['XY', 89]])).toBe(false);
-    expect(isWinningTicket([['ABC', 66], ['dddd', 100], ['Hello', 108]])).toBe(true);
-    expect(isWinningTicket([['dddd', 15], ['Hello', 108], ['ABC', 66]])).toBe(false);
-  });
-});
-
-describe("25-getNumForIP", function () {
-  it("returns a number", function () {
-    expect(typeof getNumForIP('0.0.0.0')).toBe('number');
-  });
-  it("returns the correct number for an IP address", function () {
-    expect(getNumForIP('0.0.0.1')).toBe(1);
-    expect(getNumForIP('0.0.2.0')).toBe(512);
-    expect(getNumForIP('192.156.99.15')).toBe(3231474447);
-    expect(getNumForIP('10.0.0.1')).toBe(167772161);
-  });
-});
-
-describe("26-toCamelCase", function () {
-  it("returns a string", function () {
-    expect(typeof toCamelCase('a')).toBe('string');
-  });
-  it("returns the correct string", function () {
-    expect(toCamelCase('wdi-rocks')).toBe('wdiRocks')
-    expect(toCamelCase('banana_Turkey_potato')).toBe('bananaTurkeyPotato')
-    expect(toCamelCase('Mama-mia')).toBe('MamaMia')
-    expect(toCamelCase('A_b_c')).toBe('ABC')
-  });
-});
-
-describe("27-countTheBits", function () {
-  it("returns a number", function () {
-    expect(typeof countTheBits(0)).toBe('number');
-  });
-  it("returns the correct number of bits", function () {
-    expect(countTheBits(0)).toBe(0);
-    expect(countTheBits(13)).toBe(3)
-    expect(countTheBits(256)).toBe(1)
-    expect(countTheBits(255)).toBe(8)
-    expect(countTheBits(65535)).toBe(16)
-  });
-});
-
-describe("28-gridTrip", function () {
-  it("returns an array", function () {
-    expect(Array.isArray(gridTrip([0, 0], 'U1'))).toBe(true);
-  });
-  it("returns the correct final position", function () {
-    expect(gridTrip([0, 0], 'U2R1')).toEqual([1, 2])
-    expect(gridTrip([10, 5], 'D5L15U2')).toEqual([-5, 2])
-    expect(gridTrip([100, -22], 'L2L15D50U1D9')).toEqual([83, -80])
-  });
-});
-
-describe("29-addChecker", function () {
-  it("returns a boolean", function () {
-    expect(typeof addChecker([0, 1], 2)).toBe('boolean');
-  });
-  it("checks if two ints add up to desired total", function () {
-    expect(addChecker([1, 2], 3)).toBe(true);
-    expect(addChecker([-3, 2], 9)).toBe(false);
-    expect(addChecker([10, 15, 16, 22], 32)).toBe(true);
-    expect(addChecker([10, 15, 16, 22], 19)).toBe(false);
-  });
-});
-
-describe("30-totalTaskTime", function () {
-  it("returns zero when there are no tasks", function () {
-    expect(totalTaskTime([], 1)).toBe(0);
-  });
-  it("handles two tasks and two threads", function () {
-    expect(totalTaskTime([4, 2, 5], 1)).toBe(11);
-    expect(totalTaskTime([5, 8], 2)).toBe(8);
-    expect(totalTaskTime([4, 2, 10], 2)).toBe(12);
-  });
-  it("handles tasks with three threads", function () {
-    expect(totalTaskTime([5, 2, 6, 8, 7, 2], 3)).toBe(12);
-  });
-});
-

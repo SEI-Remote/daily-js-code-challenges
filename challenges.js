@@ -171,7 +171,18 @@ range(5,2) //=> "First argument must be less than second"
 -----------------------------------------------------------------------------*/
 // Your solution for 06-range here:
 
-
+function range(num1,num2){
+  if (num2<num1){
+    return 'First argument must be less than second';
+  }else{
+    const result = [];
+    for(let i =0; i< num2-num1; i++){
+      let temp = num1+i;
+      result.push(temp);
+    }
+    return result;
+  }
+}
 
 
 
@@ -190,7 +201,13 @@ reverseUpcaseString("SEI Rocks!"); //=> "!SKCOR IES"
 -----------------------------------------------------------------------------*/
 // Your solution for 07-reverseUpcaseString here:
 
-
+function reverseUpcaseString(str){
+  str = str.toUpperCase();
+  let newStr = str.split('');
+  newStr.reverse();
+  let result = newStr.join('');
+  return result;
+}
 
 
 

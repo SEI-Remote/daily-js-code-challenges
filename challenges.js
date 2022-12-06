@@ -142,7 +142,13 @@ computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------------------*/
 // Your solution for 05-computeRemainder:
 
-
+function computeRemainder(a,b){
+    if (b === 0){ 
+      return Infinity;
+    }else{
+      return a%b;
+    }
+}
 
 
 

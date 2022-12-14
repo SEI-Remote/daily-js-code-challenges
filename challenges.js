@@ -259,7 +259,17 @@ charCount('Today is fantastic!') //=> { T: 1, o: 1, d: 1, a: 3, y: 1, ' ': 2, i:
 -----------------------------------------------------------------------------*/
 // Your solution for 09-charCount here:
 
-
+function charCount(str){
+  let splitStr = str.split('');
+  return splitStr.reduce(function(prev, char){
+    if(prev[char]){
+      prev[char]++;
+    }else{
+      prev[char] = 1;
+    }
+    return prev;
+  },{})
+}
 
 
 
@@ -285,7 +295,9 @@ formatWithPadding(1234, '*', 3); //=> "1234"
 -----------------------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
 
+function formatWithPadding(num, str, count){
 
+}
 
 
 
@@ -336,6 +348,20 @@ hammingDistance('abc', 'ab'); //=> NaN
 -----------------------------------------------------------------------------*/
 // Your solution for 12-hammingDistance here:
 
+function hammingDistance(str1, str2){
+  let count = 0;
+  str1 = `${str1}`;
+  str2 = `${str2}`;
+  if (str1.length !== str2.length){
+    return NaN;
+  }
+  for (let i=0; i<str1.length; i++){
+    if (str1[i]!==str2[i]){
+      count++;
+    }
+  }
+  return count;
+}
 
 
 
@@ -382,6 +408,12 @@ fromPairs([ ['name', 'Sam"], ['age', 24], ['name', 'Sally'] ]) //=> { name: "Sal
 -----------------------------------------------------------------------------*/
 // Your solution for 14-fromPairs here:
 
+function fromPairs(arr){
+  return arr.reduce(function(prev, element, index){
+    prev[element[index][0]] =  element[index][1]
+    return prev;
+  },{})
+}
 
 
 
@@ -404,7 +436,9 @@ mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44}); //=> {a: 1, b: 22, c: 
 -----------------------------------------------------------------------------*/
 // Your solution for 15-mergeObjects here:
 
-
+function mergeObjects(target, source){
+  
+}
 
 
 
@@ -441,7 +475,14 @@ findHighestPriced([
 //=> { sku: 'b2', price: 50 }
 -----------------------------------------------------------------------------*/
 // Your solution for 16-findHighestPriced here:
-
+function findHighestPriced(arr){
+  let temp;
+  arr.forEach(obj => {
+    if(temp){ if (obj.price > temp.price){temp = obj;}}
+    else{temp = obj;}
+    })
+    return temp;
+}
 
 
 
@@ -473,7 +514,10 @@ mapArray( ['rose', 'tulip', 'daisy'], function(f, i) {
 //=> ["1 - rose", "2 - tulip", "3 - daisy"]
 -----------------------------------------------------------------------------*/
 // Your solution for 17-mapArray here:
+function mapArray(arr, callback){
+  const newArr = [];
 
+}
 
 
 

@@ -514,9 +514,13 @@ mapArray( ['rose', 'tulip', 'daisy'], function(f, i) {
 //=> ["1 - rose", "2 - tulip", "3 - daisy"]
 -----------------------------------------------------------------------------*/
 // Your solution for 17-mapArray here:
-function mapArray(arr, callback){
+function mapArray(arr, callback, index){
   const newArr = [];
-
+  arr.forEach(element =>{
+    let newEl = callback(element);
+    newArr.push(newEl)
+  })
+return newArr;
 }
 
 
@@ -578,7 +582,13 @@ isPrime(29) //=> true
 isPrime(200) //=> false
 -----------------------------------------------------------------------------*/
 // Your solution for 19-isPrime here:
-
+function isPrime(num){
+  if(num < 1 && num%1===0)return false;
+  for(let i=2; i<num; i++){
+    if(num%i===0) return false;
+  }
+  return true;
+}
 
 
 
@@ -603,8 +613,26 @@ intersection(['a', 1], [true, 'a', 15]) //=> ['a']
 intersection([1, 'a', true, 1, 1], [true, 1, 'b', 1]) //=> [1, true, 1]
 -----------------------------------------------------------------------------*/
 // Your solution for 20-intersection here:
-
-
+function intersection(arr1, arr2){
+let index = arr1.reduce(function(obj,el){
+  if(obj[el]){
+    obj[el]++
+  }
+  else{
+    obj[el] = 1;
+  }
+  return obj;
+},{})
+const common = arr2.filter(function(el){
+  if(index[el]){
+    index[el]--;
+    return true;
+  }else{
+    return false;
+  }
+})
+return common;
+}
 
 
 

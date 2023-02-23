@@ -159,7 +159,7 @@ describe("14-fromPairs", function () {
 });
 
 describe("15-mergeObjects", function () {
-  it("returns same object", function () {
+  it("returns a modified version of the object passed into the function as the first argument", function () {
     var obj = {};
     expect(mergeObjects(obj, { a: 1 })).toBe(obj);
   });

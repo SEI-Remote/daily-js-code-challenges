@@ -36,8 +36,8 @@ body { overflow-y: scroll; }
 .jasmine_html-reporter .jasmine-bar.jasmine-incomplete { background-color: #bababa; }
 .jasmine_html-reporter .jasmine-bar.jasmine-skipped { background-color: #bababa; }
 .jasmine_html-reporter .jasmine-bar.jasmine-warning { background-color: #ba9d37; color: #333; }
-.jasmine_html-reporter .jasmine-bar.jasmine-menu { background-color: #fff; color: #aaa; }
-.jasmine_html-reporter .jasmine-bar.jasmine-menu a { color: #333; }
+.jasmine_html-reporter .jasmine-bar.jasmine-menu { background-color: #fff; color: #333; font-size: large; font-weight: bold;}
+.jasmine_html-reporter .jasmine-bar.jasmine-menu a { color: #55f; }
 .jasmine_html-reporter .jasmine-bar a { color: white; }
 .jasmine_html-reporter.jasmine-spec-list .jasmine-bar.jasmine-menu.jasmine-failure-list, .jasmine_html-reporter.jasmine-spec-list .jasmine-results .jasmine-failures { display: none; }
 .jasmine_html-reporter.jasmine-failure-list .jasmine-bar.jasmine-menu.jasmine-spec-list, .jasmine_html-reporter.jasmine-failure-list .jasmine-summary { display: none; }

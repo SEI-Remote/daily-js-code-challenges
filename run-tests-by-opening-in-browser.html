@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DCC Tests</title>
 
     <link
@@ -9,34 +11,15 @@
       type="image/png"
       href="./assets/ga_logo_black.png"
     />
-    <link rel="stylesheet" href="lib/jasmine-3.3.0/jasmine.css" />
-    <style>
-      main {
-        border: 2px solid grey;
-        border-radius: 10px;
-        color: grey;
-        margin: 20px;
-        padding: 20px;
-        font-family: Helvetica;
-      }
-      main img {
-        height: 40px;
-        margin-right: 15px;
-      }
-      .header {
-        display: flex;
-        align-items: center;
-      }
-    </style>
+    <link rel="stylesheet" href="lib/jasmine-5.0.0/jasmine.css" />
 
-    <script src="lib/jasmine-3.3.0/jasmine.js"></script>
-    <script src="lib/jasmine-3.3.0/jasmine-html.js"></script>
-    <script src="lib/jasmine-3.3.0/boot.js"></script>
+    <script src="lib/jasmine-5.0.0/jasmine.js"></script>
+    <script src="lib/jasmine-5.0.0/jasmine-html.js"></script>
+    <script src="lib/jasmine-5.0.0/boot0.js"></script>
+    <script src="lib/jasmine-5.0.0/boot1.js"></script>
 
-    <!-- include source files here... -->
     <script src="challenges.js"></script>
 
-    <!-- include spec files here... -->
     <script src="spec/ChallengesSpec.js"></script>
   </head>
 
@@ -66,11 +49,9 @@
         </li>
         <li>
           Your instructors will be checking your progress from time-to-time.
-          <strong
-            >Don't move any of the files from where they currently are</strong
-          >
-          - simply solve the challenges, commit your work, and push your
-          solutions to GitHub.
+          Don't move any of the files from where they currently are- simply
+          solve the challenges, commit your work, and push your solutions to
+          GitHub.
         </li>
       </ul>
     </main>
